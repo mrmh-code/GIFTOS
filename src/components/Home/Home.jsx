@@ -5,13 +5,16 @@ import HomeTextLeft from "@/modules/Home/HomeTextLeft";
 import HomePersonRight from "@/modules/Home/HomePersonRight";
 import {styled} from "@mui/material/styles";
 
-const StyleBox=styled(Box)({
+const StyledBox=styled(Box)({
     background:'#F89CAB'
 })
 
+
+
+
 const Home = () => {
     return (
-        <StyleBox>
+        <StyledBox>
         <Grid container spacing={2}>
             <Grid item xs={12} md={8}>
               <HomeTextLeft/>
@@ -22,7 +25,7 @@ const Home = () => {
 
         </Grid>
 
-        </StyleBox>
+        </StyledBox>
     );
 };
 

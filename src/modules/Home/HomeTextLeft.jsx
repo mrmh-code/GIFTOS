@@ -20,10 +20,6 @@ const StyleBox=styled(Box)({
         fontWeight:'600',
         fontSize:'50px'
     }
-    ,
-
-
-
 })
 
 const StyledButton=styled(Button)({
@@ -32,6 +28,8 @@ const StyledButton=styled(Button)({
     padding:'8px 29px',
     color:'white',
     fontSize:'15px',
+    fontWeight:'100',
+
 
     '&:hover': {
         background:'none',
@@ -51,7 +49,7 @@ const HomeTextLeft = () => {
             <Typography variant="p" gutterBottom sx={{color:'white'}}>
                 Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
             </Typography>
-
+            <br/>
             <StyledButton >CONTACT US</StyledButton>
 
         </StyleBox>
