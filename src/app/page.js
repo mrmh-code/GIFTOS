@@ -9,6 +9,7 @@ import BestSaving from "@/components/BestSaving/BestSaving";
 import ShopWithUs from "@/components/ShopWithUs/ShopWithUs";
 import GiftsForU from "@/components/GiftsForU/GiftsForU";
 import Testimonial from "@/components/Testimonial/Testimonial";
+import Footer from "@/components/Footer/Footer";
 
 
 const Page = () => {
@@ -24,6 +25,7 @@ const Page = () => {
             <ShopWithUs/>
             <GiftsForU/>
              <Testimonial/>
+            <Footer/>
         </Container>
 
     );

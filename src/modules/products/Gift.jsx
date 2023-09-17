@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import {Stack} from "@mui/material";
 import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 
 
 const PREFIX='Gift';
@@ -64,6 +65,7 @@ const Gift = (props) => {
             <StyledStack >
 
                 <Box>
+                    <Link href={'/productDetails'}>
                     <StyledTypographyBody1 variant='body1'>New</StyledTypographyBody1>
                     <Stack direction="row" justifyContent="center">
                         <img className={classes.img} src={gift.img} width={130} height={130}/>
@@ -74,7 +76,9 @@ const Gift = (props) => {
                        <StyledTypography1>{gift.title}</StyledTypography1>
                        <StyledTypography2>Price <span className={classes.priceColor}>${gift.price}</span> </StyledTypography2>
                    </Box>
+                    </Link>
                 </Box>
+
             </StyledStack>
         </Box>
     );

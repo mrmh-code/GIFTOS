@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
+import {styled, useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
@@ -32,6 +32,21 @@ const images = [
 
 
 ];
+
+const StyledButton=styled(Button)({
+
+    background:'#DB4F66',
+    padding:'8px 29px',
+    color:'white',
+    fontSize:'15px',
+    fontWeight:'100',
+    cursor:'pointer',
+    '&:hover': {
+        backgroundColor: '#DB4F66', // Reset the hover background color
+        color: 'white',
+    }
+
+})
 
 const Testimonial = () => {
 
@@ -83,8 +98,9 @@ const Testimonial = () => {
             >
                 {images.map((step, index) => (
                     <div key={step.label}>
+
                         {Math.abs(activeStep - index) <= 2 ? (
-                           <Typography varient="p">{step.desc}</Typography>
+                            <Typography varient="p">{step.desc}</Typography>
                         ) : null}
                     </div>
                 ))}
@@ -94,7 +110,7 @@ const Testimonial = () => {
                 position="static"
                 activeStep={activeStep}
                 nextButton={
-                    <Button
+                    <StyledButton
                         size="small"
                         onClick={handleNext}
                         disabled={activeStep === maxSteps - 1}
@@ -105,17 +121,17 @@ const Testimonial = () => {
                         ) : (
                             <KeyboardArrowRight />
                         )}
-                    </Button>
+                    </StyledButton>
                 }
                 backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                    <StyledButton size="small" onClick={handleBack} disabled={activeStep === 0}>
                         {theme.direction === 'rtl' ? (
                             <KeyboardArrowRight />
                         ) : (
                             <KeyboardArrowLeft />
                         )}
                         Back
-                    </Button>
+                    </StyledButton>
                 }
             />
         </Box>
